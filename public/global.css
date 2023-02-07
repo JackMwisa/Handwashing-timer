@@ -1,0 +1,8 @@
+/*my font*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,100;1,300;1,900&display=swap');
+
+
+body {
+	font-family: lato, sans-serif ;
+
+}
