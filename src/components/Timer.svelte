@@ -1,6 +1,6 @@
 <script>
 
-    import HowTo from "./ProgressBar.svelte"
+    import ProgressBar from "./ProgressBar.svelte"
 
 </script>
 
@@ -9,4 +9,4 @@
 <p>Timer</p>
 
 
-<HowTo />
+<ProgressBar />
