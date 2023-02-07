@@ -1,32 +1,48 @@
 <script>
+  import ProgressBar from "./ProgressBar.svelte";
 
-    import ProgressBar from "./ProgressBar.svelte"
+  let totalSeconds = 20;
+  let secondLeft = totalSeconds;
+
+function startTimer() {
+    let timer = setInterval(() => {
+        secondLeft--;
+        document.getElementById("timer").innerHTML = secondLeft;
+        if (secondLeft === 0) {
+            clearInterval(timer);
+            document.getElementById("timer").innerHTML = "Time's up!";
+        }
+    }, 1000);
+}
+
+
+  let timer = setInterval(() => {
+    secondLeft--;
+    if (secondLeft === 0) {
+      clearInterval(timer);
+    }
+     
+  }, 1000);
+
 
 </script>
 
-
-
-<style>
-.start {
-    background-color: rgb(rgb(236, 89, 89)(87, 43, 43), green, blue);
-    width: 100%;
-    margin: 10px 0;
-}    
-
-</style>
-
 <div bp="grid">
-
-    <h2 bp="offset-5@md 4@md 12@sm">
-
-        Seconds Left:
-
-    </h2>
-
-
+  <h2 bp="offset-5@md 4@md 12@sm">
+    Seconds Left: {secondLeft}
+  </h2>
 </div>
 
 <ProgressBar />
 
+<div bp="grid">
+  <button id="timer" bp="offset-5@md 4@md 12@sm" class="start">Start</button>
+</div>
 
-<button class="start">Start</button>
+<style>
+  .start {
+    background-color: rgb(227, 168, 18);
+    margin: 10px 0;
+    width: 100%;
+  }
+</style>
