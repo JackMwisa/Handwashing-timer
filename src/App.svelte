@@ -4,6 +4,11 @@
 
   let audio;
 
+function timerEnds (e) {
+	audio.play();
+
+}
+
 import Text from "./components/Timer.svelte";
 </script>
 
@@ -17,7 +22,7 @@ import Text from "./components/Timer.svelte";
 <h1>Handwashing App</h1>
 
 
-<Timer />
+<Timer on:end={timerEnds}/>
 <HowTo />
 
 
@@ -31,8 +36,8 @@ import Text from "./components/Timer.svelte";
 </h3>
 
 
-<audio bind:this={audio} src="">
+<audio bind:this={audio} src="sound.wav">
 
-	<source src=""/>
+ 
 
 </audio>
