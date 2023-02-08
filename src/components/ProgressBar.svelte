@@ -25,8 +25,8 @@
 
     <div bp="offset-5@md 4@md 12@sm" class="progress-container">
 
-        <div class="progress-bar" role="progressbar"  style="width: {progress}%; background-color:blueviolet; padding: 10px; margin-bottom: 5px">
-            <span class="sr-only">% {progress}
+        <div class="progress-bar" role="progressbar"  style="width: {progress}%; background-color:blueviolet; padding: 15px; margin-bottom: 5px">
+            <span class="sr-only"> {progress} %
 
             </span>
         </div>
