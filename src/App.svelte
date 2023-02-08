@@ -1,7 +1,10 @@
 <script>
   import HowTo from "./components/HowTo.svelte";
   import Timer from "./components/Timer.svelte";
-  import Text from "./components/Timer.svelte";
+
+  let audio;
+
+import Text from "./components/Timer.svelte";
 </script>
 
 
@@ -26,3 +29,10 @@
 <h3>
 	<a href="https://freesound.org/people/metrostock99/sounds/345086/">Sound source</a>
 </h3>
+
+
+<audio bind:this={audio} src="">
+
+	<source src=""/>
+
+</audio>
